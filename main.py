@@ -15,6 +15,26 @@ app.layout = html.Div([
 
 #####
 df_pop_london = pd.read_excel('./central_trend_2017_base.xlsx')
+data = pd.read_excel('./data.xlsx')
+
+##BAR CHAR 01
+data=pd.read_excel('./data.xlsx')
+df=pd.DataFrame(data, columns=['State','Hospital Beds Needed, Six Months','Hospital Beds Needed, Twelve Months','Hospital Beds Needed, Eighteen Months'])
+df_s=np.array(df['State']) #animals
+df_6T=np.array(df['Hospital Beds Needed, Six Months'])
+df_12T=np.array(df['Hospital Beds Needed, Twelve Months'])
+df_18T=np.array(df['Hospital Beds Needed, Eighteen Months'])
+index= np.arange(len(df_s))
+width=0.26
+bar_char_01 = go.Figure(data=[
+    go.Bar(name='Six Months', x=df_s, y=df_6T),
+    go.Bar(name='Twelve Months', x=df_s, y=df_12T),
+    go.Bar(name='Eighteen Months', x=df_s, y=df_18T)
+])
+# Change the bar mode
+bar_char_01.update_layout(barmode='group')
+
+## end bar char 01
 df_pop_london_10y_later = df_pop_london[['district', 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028,2029,2030]].query('district == "London"')
 london_y1, london_y2, london_y3, london_y4, london_y5, london_y6, london_y7, london_y8, london_y9, london_y10,london_y11  = df_pop_london_10y_later[2020].sum(),df_pop_london_10y_later[2021].sum(), df_pop_london_10y_later[2022].sum(), df_pop_london_10y_later[2023].sum(), df_pop_london_10y_later[2024].sum(), df_pop_london_10y_later[2025].sum(), df_pop_london_10y_later[2026].sum(), df_pop_london_10y_later[2027].sum(), df_pop_london_10y_later[2028].sum(), df_pop_london_10y_later[2029].sum(),df_pop_london_10y_later[2030].sum()
 arrLondonYear = np.arange(2020, 2031, 1)
@@ -399,7 +419,7 @@ barChart = html.Div([
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure= bar_type2_fig), className='col-12'
+                    dcc.Graph(figure= bar_char_01), className='col-12'
                 )
             ], className='row'),
             
