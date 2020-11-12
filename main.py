@@ -292,7 +292,7 @@ barChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(bar_char_01), className='col-12'
+                    dcc.Graph(figure=bar_char_01), className='col-12'
                 )
             ], className='row'),
                 html.Div([
