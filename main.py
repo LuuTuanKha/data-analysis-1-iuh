@@ -40,6 +40,7 @@ main = html.Div([
         'fontSize': '50px',
         'color': 'white',
         'textAlign': 'center'
+
     }),
     # link to another page
     html.Div([
@@ -67,7 +68,7 @@ main = html.Div([
                     html.Div('- London population prediction (Dự đoán dân số london): nghiên cứu và dự đoán về sự gia tăng dân số của thành phố London (Anh - UK) cùng các vấn đề về dân số liên quan khác trong tương lai gần.'),
                     html.Div('- Project này sử dụng Framework Dash - Plotly để xây dựng và dữ liệu được lấy từ trang data.world để phân tích')
                 ],className='col-8'),
-                html.Img(src='./assets/pop.jpg', className='col-4')
+                html.Img(src='./assets/img/doctor.jpg', className='col-4')
 
             ], className='row', style={ 'fontSize': '15px' })
         ])
@@ -79,7 +80,7 @@ main = html.Div([
                 'fontWeight': 'bold',
             }),
             html.Div([
-                html.Img(src='./assets/team.jpg', className='col-4'),
+                html.Img(src='./assets/img/myteam.png', className='col-4'),
                 html.Div([
                 html.Div('18081331 - Nguyễn Công Thành Đạt'),
                 html.Div('18089811 - Mai kiên cường'),
