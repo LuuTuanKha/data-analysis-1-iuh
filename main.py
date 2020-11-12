@@ -292,9 +292,15 @@ barChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(bar_char_01), className='col-12'
                 )
             ], className='row'),
+                html.Div([
+                 html.Span('Ý nghĩa:', className='introMatplotlib'),
+                html.Span('Biểu đồ biểu diễn số giường bệnh cần có, để phục vụ bệnh mắc bệnh trong 6, 12, 18 tháng tại các bang.',className='content'),
+                html.Span('# Thông qua biểu đồ cột chúng ta thấy được tại tất cả các bang, số giường bệnh cần có trong 6 tháng đầu mắc dịch Covid là cao nhất và nó thấp dần trong 12 tháng, 18 tháng. Như vậy, chúng ta thấy rằng số bệnh nhân mắc bệnh trong 6 tháng tại các bang rất cao , số người mắc trong thời gian tiếp theo sẽ giảm dần do đó nhà nước thông qua số liệu này sẽ tìm ra giải pháp phân bổ nhân sự là bác sĩ đến công tác đúng nơi và đúng vị trí công tác của mình những nơi tập trung,khoảng thời gian người mắc bệnh nhiều thì số bác sĩ giỏi nhiều hơn bác sĩ khác cung những nơi người mắc bệnh nặng thì cần điều chuyển những bác sĩ giỏi để nâng cao viện chữa bệnh',className='content')
+
+            ]),
 
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
