@@ -151,8 +151,8 @@ simpleChart = html.Div([
                 dcc.Link('Home Page', href="/"),
             ], className='fl'),
             html.Div([
-                 html.Span('Giới thiệu về Dash - Plotly:', className='introMatplotlib'),
-                html.Span('Dash là một framework mã nguồn mở dành cho xây dựng ứng dụng phân tích dữ liệu mà không cần đến Ngôn ngữ JavaScript, và nó được tích hợp với thi viện Plotly - một thư viện đồ họa. ',className='content')
+                 html.Span('Introductionto  Dash - Plotly:', className='introMatplotlib'),
+                html.Span('Dash là Framework Python hiệu quả để xây dựng các ứng dụng phân tích dữ liệu trên web. Được viết bằng Flask, Plotly.js và React.js, Dash rất lý tưởng để xây dựng các ứng dụng trực quan hóa dữ liệu với giao diện người dùng dễ dàng tuỳ chỉnh bằng Python thuần. Nó đặc biệt phù hợp cho bất kỳ ai làm việc với dữ liệu bằng Python. Dash loại bỏ tất cả các công nghệ và giao thức cần thiết để xây dựng một ứng dụng dựa trên web tương tác. Dash đủ đơn giản để bạn có thể liên kết giao diện người dùng của mình bằng  Python trong một thời gian ngắn. Dash triển khai ứng dụng của mình tới các máy chủ và sau đó chia sẻ chúng thông qua các URL.',className='content')
             ])
            
         ],className='col-8 matplotlib bg-light'),
@@ -377,7 +377,7 @@ pieChart = html.Div([
 #scatter charts
 
 p = data['Projected Infected Individuals']
-state = data['State']
+state = state = df_s
 PII = data['Projected Infected Individuals']
 scatt_char_01 = go.Figure(data=go.Scatter(
     y = PII,
