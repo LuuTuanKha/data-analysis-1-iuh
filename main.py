@@ -132,7 +132,7 @@ simpleChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -156,6 +156,14 @@ simpleChart = html.Div([
 
 ##-----------------------------------------------------
 
+## 2D-Histogram
+
+df_his = pd.DataFrame(data, columns=['Available Hospital Beds','Projected Infected Individuals'])
+
+fig_his_01 = px.density_heatmap(df_his, x="Available Hospital Beds", y="Projected Infected Individuals",nbinsx=20, nbinsy=20, color_continuous_scale="Viridis", title="Tỷ lệ bệnh nhân dự kiến và số giường bệnh trống, dữ liệu tổng hợp từ từng bang")
+df_his = pd.DataFrame(data, columns=['Total Hospital Beds','Total ICU Beds','Adult Population'])
+
+fig_his_02 = px.density_heatmap(df_his, x="Total Hospital Beds", y="Total ICU Beds", z= 'Adult Population',marginal_x="histogram", marginal_y="histogram",histfunc="avg",title="Tỷ lệ người trưởng thành, số giường bệnh  và số giường bệnh đạt chuẩn ICD , dữ liệu tổng hợp từ từng bang")
 
 
 
@@ -167,7 +175,7 @@ simpleChart = html.Div([
 
 
 ##-----------------------------------------------------
-# Line Chart Link
+# 2D-Histogram Link
 lineChart = html.Div([
      # home page text
     html.Div(
@@ -176,7 +184,7 @@ lineChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -186,7 +194,7 @@ lineChart = html.Div([
         className='col-3 listContainer bg-light'),
         html.Div([
             html.Div([
-                html.Div('Line Chart', className='title'),
+                html.Div('2D-Histogram', className='title'),
                 dcc.Link('Home Page', href="/"),
             ], className='fl'),
             html.Div([
@@ -195,22 +203,22 @@ lineChart = html.Div([
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Line chart (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',className='content')
+                html.Span('2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',className='content')
             ]),
             html.Div([
-                 html.Span('Type of Charts:', className='introMatplotlib')
+                 html.Span('Loại biểu đồ:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div('Loại 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure= fig_his_01), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div('Loại 2:', className='col-3  line-chart'),
                 html.Div(
-                    ##dcc.Graph(figure= lineChartType2), className='col-12'
+                    dcc.Graph(figure= fig_his_02), className='col-12'
                 )
             ], className='row'),
             
@@ -223,7 +231,7 @@ lineChart = html.Div([
 # # Bar Chart Link
 
 
-#type 2 chart
+#Loại 2 chart
 
 
 #---------------------------------------------
@@ -234,7 +242,7 @@ barChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -256,10 +264,10 @@ barChart = html.Div([
                 html.Span('Bar chart (biểu đồ cột): thường được dùng khi cần phân loại dữ liệu và so sánh độ tương quản giữa chúng ',className='content')
             ]),
             html.Div([
-                 html.Span('Type of Charts:', className='introMatplotlib')
+                 html.Span('Loại biểu đồ:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div('Loại 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure=bar_char_01), className='col-12'
                 )
@@ -272,7 +280,7 @@ barChart = html.Div([
             ]),
 
              html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div('Loại 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= bar_char_01), className='col-12'
                 )
@@ -317,7 +325,7 @@ pieChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -339,17 +347,17 @@ pieChart = html.Div([
                 html.Span('Pie chart (biểu đồ tròn) được sử dụng khi cần biểu diễn dữ liệu dưới dạng % ',className='content')
             ]),
             html.Div([
-                 html.Span('Type of Charts:', className='introMatplotlib'),
+                 html.Span('Loại biểu đồ:', className='introMatplotlib'),
             ]),
             html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div('Loại 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= fig_pie_01), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div('Loại 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
@@ -378,7 +386,7 @@ scatterChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -400,17 +408,17 @@ scatterChart = html.Div([
                 html.Span('Scatter chart (biểu đồ phân tán) thường được sử dụng để thể hiện mối tương quan giữa các yếu tố trên đồ thị. ',className='content')
             ]),
             html.Div([
-                 html.Span('Type of Charts:', className='introMatplotlib'),
+                 html.Span('Loại biểu đồ:', className='introMatplotlib'),
             ]),
             html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div('Loại 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div('Loại 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
@@ -440,7 +448,7 @@ dotChart = html.Div([
         html.Div([
             html.Ul([
                 dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('Line Chart', href="/line-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
                 dcc.Link('Bar Chart', href="/bar-chart", className='el'),
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
@@ -462,17 +470,17 @@ dotChart = html.Div([
                 html.Span('Dot chart (biểu đồ chấm) sử dụng khi so sánh dữ liệu phân loại trong cùng một thời gian.',className='content')
             ]),
             html.Div([
-                 html.Span('Type of Charts:', className='introMatplotlib')
+                 html.Span('Loại biểu đồ:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div('Loại 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div('Loại 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
