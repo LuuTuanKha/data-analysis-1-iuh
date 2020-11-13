@@ -94,10 +94,7 @@ main = html.Div([
                 html.Div('180898 - Nguyễn Tấn Hưng'),
                 html.Div('18084791 - Phan Thị Tứ Thi'),
                 html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
-                html.Div('18093751 - Lưu Tuấn Kha'),
-                html.Div('180898 - Nguyễn Tấn Hưng'),
-                html.Div('18084791 - Phan Thị Tứ Thi'),
-                html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
+
                 ],className='col-4 team'),
                  html.Div( [
                 html.Div('18092791 - Hoàng Hữu Huy'),
