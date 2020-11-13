@@ -53,10 +53,10 @@ main = html.Div([
     # link to another page
     html.Div([
         dcc.Link('Simple Chart', href='/simple-chart', style={
-             'color': '#f5f5f5'
+             'color': 'black'
              }),
         dcc.Link('Data Analysis', href='/data-analysis', style={
-            'color': '#f5f5f5'
+            'color': 'black'
         })
     ], style={
         'display': 'flex',
