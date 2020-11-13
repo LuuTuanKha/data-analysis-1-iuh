@@ -117,8 +117,9 @@ simpleChart = html.Div([
         'position': 'absolute',
         'top': '0',
         'left': '0',
-        'z-index': '-999'
-    }, className='bg-dark'),
+        'z-index': '-999',
+
+    }),
      # home page text
     html.Div(
     ),
