@@ -90,17 +90,17 @@ main = html.Div([
             html.Div([
                 html.Img(src='./assets/img/myteam.png', className='col-4'),
                 html.Div([
-                html.Div('18081331 - Nguyễn Công Thành Đạt'),
-                html.Div('18089811 - Mai kiên cường'),
-                html.Div('18084791 - Trương Công Cường'),
-                html.Div('18079251 - Đỗ Tùng Dương'),   
-                ],className='col-4 team'),
-                 html.Div( [
-                html.Div('18092791 - Hoàng Hữu Huy'),
-                html.Div('18084851 - Châu Quốc An'),
-                html.Div('18072661 - Lại Văn Vượng')       
-                ],className='col-4'),
-            ], className='row', style={ 'fontSize': '15px' })
+                html.Div('18093751 - Lưu Tuấn Kha'),
+                html.Div('180898 - Nguyễn Tấn Hưng'),
+                html.Div('18084791 - Phan Thị Tứ Thi'),
+                html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
+                html.Div('18093751 - Lưu Tuấn Kha'),
+                html.Div('180898 - Nguyễn Tấn Hưng'),
+                html.Div('18084791 - Phan Thị Tứ Thi'),
+                html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
+                ],className='col-4 team')
+
+            ], className='row', style={ 'fontSize': '20 px' })
         ])
     ], className='mt-5 bg-light intro'),
 
@@ -283,6 +283,14 @@ barChart = html.Div([
 ## pie chart draw
 ##
 
+df_pie=pd.DataFrame(data, columns=['State','Total Hospital Beds'])
+df_state=np.array(df_pie['State']) #animals
+df_beds=np.array(df_pie['Total Hospital Beds'])
+fig_pie_01 = px.pie(df_state, values=df_beds, names=df_state, title="Tỉ lệ giường bệnh của các bang")
+fig_pie_01.update_traces(textposition='inside')
+fig_pie_01.update_layout(uniformtext_minsize=12, uniformtext_mode='hide')
+
+
 
 
 
@@ -331,7 +339,7 @@ pieChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure=fig_pie_01), className='col-12'
                 )
             ], className='row'),
 
