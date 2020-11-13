@@ -98,8 +98,12 @@ main = html.Div([
                 html.Div('180898 - Nguyễn Tấn Hưng'),
                 html.Div('18084791 - Phan Thị Tứ Thi'),
                 html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
-                ],className='col-4 team')
-
+                ],className='col-4 team'),
+                 html.Div( [
+                html.Div('18092791 - Hoàng Hữu Huy'),
+                html.Div('18084851 - Châu Quốc An'),
+                html.Div('18072661 - Lại Văn Vượng')
+                ],className='col-4'),
             ], className='row', style={ 'fontSize': '20 px' })
         ])
     ], className='mt-5 bg-light intro'),
