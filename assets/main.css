@@ -11,4 +11,5 @@
 body {
  background-image: url("./img/backgr-ana.jpg");
  background-repeat: repeat;
+background-size: cover;
 }
