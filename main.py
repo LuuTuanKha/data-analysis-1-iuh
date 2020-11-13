@@ -43,17 +43,7 @@ bar_char_01.update_layout(barmode='group',title ="Biểu đồ biểu diễn s�
 
 main = html.Div([
     # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div('Home page', style={
         'fontSize': '50px',
         'color': 'white',
@@ -233,17 +223,7 @@ lineChart = html.Div([
 #---------------------------------------------
 barChart = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div([
         html.Div([
             html.Ul([
@@ -318,17 +298,7 @@ barChart = html.Div([
 ##
 pieChart = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div([
         html.Div([
             html.Ul([
@@ -389,17 +359,7 @@ pieChart = html.Div([
 #-------------------------
 scatterChart = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div([
         html.Div([
             html.Ul([
@@ -461,17 +421,7 @@ scatterChart = html.Div([
 #------------------------------------------------------
 dotChart = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div([
         html.Div([
             html.Ul([
@@ -520,17 +470,7 @@ dotChart = html.Div([
 ##---------------------------------------------------------
 DataAnalysis = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(),
     html.Div([
         html.Div([
             html.Div([
