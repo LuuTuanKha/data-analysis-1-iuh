@@ -206,17 +206,17 @@ lineChart = html.Div([
                 html.Span('2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',className='content')
             ]),
             html.Div([
-                 html.Span('Loại biểu đồ:', className='introMatplotlib')
+                 html.Span('Type of charts:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Loại 1:', className='col-3  line-chart'),
+                html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= fig_his_01), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Loại 2:', className='col-3  line-chart'),
+                html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= fig_his_02), className='col-12'
                 )
@@ -231,7 +231,7 @@ lineChart = html.Div([
 # # Bar Chart Link
 
 
-#Loại 2 chart
+#Type 2 chart
 
 
 #---------------------------------------------
@@ -261,13 +261,13 @@ barChart = html.Div([
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Bar chart (biểu đồ cột): thường được dùng khi cần phân loại dữ liệu và so sánh độ tương quản giữa chúng ',className='content')
+                html.Span('Bar chart (biểu đồ cột): thường được dùng khi cần phân Type dữ liệu và so sánh độ tương quản giữa chúng ',className='content')
             ]),
             html.Div([
-                 html.Span('Loại biểu đồ:', className='introMatplotlib')
+                 html.Span('Type of charts:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Loại 1:', className='col-3  line-chart'),
+                html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure=bar_char_01), className='col-12'
                 )
@@ -280,7 +280,7 @@ barChart = html.Div([
             ]),
 
              html.Div([
-                html.Div('Loại 2:', className='col-3  line-chart'),
+                html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= bar_char_01), className='col-12'
                 )
@@ -347,17 +347,17 @@ pieChart = html.Div([
                 html.Span('Pie chart (biểu đồ tròn) được sử dụng khi cần biểu diễn dữ liệu dưới dạng % ',className='content')
             ]),
             html.Div([
-                 html.Span('Loại biểu đồ:', className='introMatplotlib'),
+                 html.Span('Type of charts:', className='introMatplotlib'),
             ]),
             html.Div([
-                html.Div('Loại 1:', className='col-3  line-chart'),
+                html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure= fig_pie_01), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Loại 2:', className='col-3  line-chart'),
+                html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
@@ -408,17 +408,17 @@ scatterChart = html.Div([
                 html.Span('Scatter chart (biểu đồ phân tán) thường được sử dụng để thể hiện mối tương quan giữa các yếu tố trên đồ thị. ',className='content')
             ]),
             html.Div([
-                 html.Span('Loại biểu đồ:', className='introMatplotlib'),
+                 html.Span('Type of charts:', className='introMatplotlib'),
             ]),
             html.Div([
-                html.Div('Loại 1:', className='col-3  line-chart'),
+                html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Loại 2:', className='col-3  line-chart'),
+                html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
@@ -463,24 +463,24 @@ dotChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Dot chart (biểu đồ chấm) là một dạng biểu đồ phân tán (Scatter chart) thể hiện sự khác biệt giữa hai hoặc nhiều loại dữ liệu trong cùng một thời điểm hoặc giữa hai hay nhiều điều kiện (condition). Hãy so sánh với Biểu đồ cột (Bar chart), biểu đồ chấm (dot chart) dễ nhìn hơn và cho phép người phân tích dễ dàng so sánh các loại dữ liệu.  ',className='content')
+                html.Span('Dot chart (biểu đồ chấm) là một dạng biểu đồ phân tán (Scatter chart) thể hiện sự khác biệt giữa hai hoặc nhiều Type dữ liệu trong cùng một thời điểm hoặc giữa hai hay nhiều điều kiện (condition). Hãy so sánh với Biểu đồ cột (Bar chart), biểu đồ chấm (dot chart) dễ nhìn hơn và cho phép người phân tích dễ dàng so sánh các Type dữ liệu.  ',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Dot chart (biểu đồ chấm) sử dụng khi so sánh dữ liệu phân loại trong cùng một thời gian.',className='content')
+                html.Span('Dot chart (biểu đồ chấm) sử dụng khi so sánh dữ liệu phân Type trong cùng một thời gian.',className='content')
             ]),
             html.Div([
-                 html.Span('Loại biểu đồ:', className='introMatplotlib')
+                 html.Span('Type of charts:', className='introMatplotlib')
             ]),
             html.Div([
-                html.Div('Loại 1:', className='col-3  line-chart'),
+                html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
-                html.Div('Loại 2:', className='col-3  line-chart'),
+                html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(), className='col-12'
                 )
