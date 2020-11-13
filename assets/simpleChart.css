@@ -38,10 +38,10 @@
   }
 .el:hover {
     z-index: 999;
-    color: red;
+    color: white;
     text-decoration: none;
-    background-color: white;
-    transform: translateX(20px);
+    background-color: black;
+    
 }
 .matplotlib {
     margin-left: 30px;
