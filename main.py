@@ -46,7 +46,7 @@ main = html.Div([
     html.Div(),
     html.Div('Home page', style={
         'fontSize': '50px',
-        'color': 'white',
+        'color': 'black',
         'textAlign': 'center'
 
     }),
