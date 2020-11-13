@@ -376,7 +376,28 @@ pieChart = html.Div([
 ##______________________________________________________
 #scatter charts
 
+p = data['Projected Infected Individuals']
+scatt_char_01 = go.Figure(data=go.Scatter(
+    y = data['Projected Infected Individuals'],
+    x = data['State'],
+    mode='markers',
+    marker=dict(
+        size=15,
+        color=-p,
+        colorscale='Viridis',
+        showscale=True
+    )
+))
+scatt_char_01.update_layout(title='Projected Infected Individuals of USA States')
 
+# scatt #2
+scatt_char_02 = go.Figure(data=go.Scatter(x=df['State'],
+                                y=df['Population 65+'],
+                                mode='markers',
+                                marker_color=df['Population 65+'],
+                                text=data['State']))
+
+scatt_char_02.update_layout(title='Population 65+ of USA States')
 
 
 
@@ -418,14 +439,14 @@ scatterChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure=scatt_char_01), className='col-12'
                 )
             ], className='row'),
 
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure=scatt_char_02), className='col-12'
                 )
             ], className='row'),
             
