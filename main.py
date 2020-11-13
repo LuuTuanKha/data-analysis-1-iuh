@@ -67,14 +67,20 @@ main = html.Div([
     # introduce tag
     html.Div([
         html.Div([
-            html.Div('Giới thiệu về project: ', style={
+            html.Div('Introduction to project: ', style={
                 'fontSize': '25px',
                 'fontWeight': 'bold',
             }),
             html.Div([
                 html.Div( [
-                    html.Div('- London population prediction (Dự đoán dân số london): nghiên cứu và dự đoán về sự gia tăng dân số của thành phố London (Anh - UK) cùng các vấn đề về dân số liên quan khác trong tương lai gần.'),
-                    html.Div('- Project này sử dụng Framework Dash - Plotly để xây dựng và dữ liệu được lấy từ trang data.world để phân tích')
+                    html.Div('- Hospital capacity data from HGHI (Phân tích số liệu giường bệnh từ HGHI): Phân tích và Ước tính công suất bệnh viện theo thời gian (6, 12, 18 tháng), nếu 20%, 40% hoặc 60% dân số Mỹ mắc phải COVID-19.'),
+                    html.Div('- Nền tảng của project:  '),
+                    html.Div(' + Framework: Dash '),
+                    html.Div(' + Ngôn ngữ: Python '),
+                    html.Div(' + Môi trường:  Google Co-Lab, Jupyter Notebook & PyCharm '),
+                    html.Div(' + Hosting: Heroku '),
+                    html.Div(' + Raw Data Source: data.world ')
+
                 ],className='col-8'),
                 html.Img(src='./assets/img/doctor.jpg', className='col-4')
 
@@ -91,13 +97,12 @@ main = html.Div([
                 html.Img(src='./assets/img/myteam.png', className='col-4'),
                 html.Div([
                 html.Div('18093751 - Lưu Tuấn Kha'),
-                html.Div('180898 - Nguyễn Tấn Hưng'),
-                html.Div('18084791 - Phan Thị Tứ Thi'),
-                html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
-                html.Div('18093751 - Lưu Tuấn Kha'),
-                html.Div('180898 - Nguyễn Tấn Hưng'),
-                html.Div('18084791 - Phan Thị Tứ Thi'),
-                html.Div('18079251 - Nguyễn Huỳnh Công Lý'),
+                html.Div('18080931  - Nguyễn Tấn Hưng'),
+                html.Div('18086141 - Phan Thị Tứ Thi'),
+                html.Div('18077551 - Nguyễn Huỳnh Công Lý'),
+                html.Div('18093421 - Lê Văn Tài'),
+                html.Div('18094051 - Nguyễn Tấn Minh'),
+
 
                 ],className='col-4 team'),
                  html.Div( [
