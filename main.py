@@ -174,17 +174,8 @@ simpleChart = html.Div([
 # Line Chart Link
 lineChart = html.Div([
      # home page text
-    html.Div('This is project of our team with Dash - plotly ', style={
-        'height': '50px',
-        'width': '100%',
-        'backgroundColor': '#f5f5f5',
-        'paddingLeft': '25px',
-        'position': 'absolute',
-        'top': '0',
-        'left': '0',
-        'display': 'flex',
-        'alignItems': 'center'
-    }),
+    html.Div(
+    ),
     html.Div([
         html.Div([
             html.Ul([
