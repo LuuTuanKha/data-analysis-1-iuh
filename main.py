@@ -393,7 +393,7 @@ scatt_char_01 = go.Figure(data=go.Scatter(
 scatt_char_01.update_layout(title='Projected Infected Individuals of USA States')
 
 # scatt #2
-pop65 = df['Population 65+']
+pop65 = data['Population 65+']
 scatt_char_02 = go.Figure(data=go.Scatter(x=state,
                                 y=pop65,
                                 mode='markers',
