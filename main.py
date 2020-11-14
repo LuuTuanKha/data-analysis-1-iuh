@@ -377,7 +377,7 @@ pieChart = html.Div([
 #scatter charts
 
 p = data['Projected Infected Individuals']
-state = state = df_s
+state  = df_s
 PII = data['Projected Infected Individuals']
 scatt_char_01 = go.Figure(data=go.Scatter(
     y = PII,
@@ -401,11 +401,53 @@ scatt_char_02 = go.Figure(data=go.Scatter(x=state,
                                 text=state))
 
 scatt_char_02.update_layout(title='Population 65+ of USA States')
+#scatter #3
+ICUbeds = df_his['Total ICU Beds']
+country = state
+beds = df_his['Total Hospital Beds']
+fig = go.Figure()
 
+fig.add_trace(go.Scatter(
+    x=country,
+    y=beds,
+    name='Total Hospital Beds',
+    marker=dict(
+        color='rgba(156, 165, 196, 0.95)',
+        line_color='rgba(156, 165, 196, 1.0)',
+    )
+))
+fig.add_trace(go.Scatter(
+    x=country, y=ICUbeds,
+    name='Total ICU Beds',
+    marker=dict(
+        color='rgba(204, 204, 204, 0.95)',
+        line_color='rgba(217, 217, 217, 1.0)'
+    )
+))
 
+fig.update_traces(mode='markers', marker=dict(line_width=1, symbol='circle', size=16))
 
-
-
+fig.update_layout(
+    title="Biểu đồ so sánh giường bệnh thường và giường bệnh chuẩn ICU",
+    xaxis=dict(
+        showgrid=False,
+        showline=True,
+        linecolor='rgb(102, 102, 102)',
+        tickfont_color='rgb(102, 102, 102)',
+        showticklabels=True,
+        ticks='outside',
+        tickcolor='rgb(102, 102, 102)',
+    ),
+    margin=dict(l=140, r=40, b=50, t=80),
+    legend=dict(
+        font_size=10,
+        yanchor='middle',
+        xanchor='right',
+    ),
+    paper_bgcolor='white',
+    plot_bgcolor='white',
+    hovermode='closest',
+)
 
 #-------------------------
 scatterChart = html.Div([
@@ -450,6 +492,12 @@ scatterChart = html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
                     dcc.Graph(figure=scatt_char_02), className='col-12'
+                )
+            ], className='row'),
+html.Div([
+                html.Div('Type 3:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig), className='col-12'
                 )
             ], className='row'),
             
