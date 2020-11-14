@@ -764,31 +764,31 @@ DataAnalysis = html.Div([
              ]),
              html.Div([
                  html.Span('- Dạng dữ liệu:', className='introMatplotlib'),
-                 html.Div('Định tính: sex, district, component ',className='content'),
-                 html.Div('Định lượng: age, 2010, 2011, … 2050, year, births, deaths, international_in, international_out, domestic_in, domestic_out',className='content'),
+                 html.Div('Định tính: State ',className='content'),
+                 html.Div('Định lượng: Beds, Total ICU Beds, Hospital Bed Occupancy Rate, ICU Bed Occupancy Rate, Available Hospital Beds,Adult Population,...',className='content'),
             ]),
              html.Div([
                  html.Span('- Thang do cho dữ liệu: ', className='introMatplotlib'),
-                 html.Div('Thang do định danh (norminal): district, sex, component ',className='content'),
-                html.Div('Thang đo khoảng( (interval): 2010, 2011,… 2050 ,year, births, deaths, international_in, international_out, domestic_in, domestic_out ',className='content')
+                 html.Div('Thang do định danh (norminal): State',className='content'),
+                html.Div('Thang đo khoảng( (interval):Beds, Total ICU Beds, Hospital Bed Occupancy Rate, ICU Bed Occupancy Rate, Available Hospital Beds,Adult Population,...',className='content')
             ]),
              html.Div([
                  html.Span('Kiểu dữ liệu: ', className='introMatplotlib'),
-                 html.Div('String: District, component,sex. ',className='content'),
-                 html.Div('Integer: Age. ',className='content'),
-                 html.Div('Decimal: 2010, 2011, 2012,.. 2050 year, births, deaths, international_in, international_out, domestic_in, domestic_out ',className='content'),
+                 html.Div('String: State ',className='content'),
+                 html.Div('Integer: Beds,Population. ',className='content'),
+                 html.Div('Decimal: Hospital Bed Occupancy Rate, ICU Bed Occupancy Rate,Percentage of Total Beds Needed,... ',className='content'),
             ]),
              html.Div([
                  html.Span('Mục tiêu nghiên cứu: ', className='introMatplotlib'),
-                 html.Div('nghiên cứu về dân số cùa thành phố london cùng với các thành phố khác trong khu vực và dự đoán dân số. ',className='content')
+                 html.Div('nghiên cứu nhằm ước tính công suất bệnh viện theo thời gian ( 6, 12, 18 tháng), nếu 20% dân số Mỹ mắc phải CoVid-19.  ',className='content')
             ]),
              html.Div([
                  html.Span('Phạm vi nghiên cứu:', className='introMatplotlib'),
-                 html.Div('10 năm sau ( 2020 -> 2031 ).',className='content')
+                 html.Div('Các Bang tại Mỹ trong 18 tháng',className='content')
             ]),
              html.Div([
                  html.Span('Nhóm biến tham gia quá trình nghiên cứu:', className='introMatplotlib'),
-                 html.Div('district, sex, age, 2020,… 2031, births, deaths ',className='content')
+                 html.Div('State,Beds,Population,Hospital Bed Occupancy Rate,...',className='content')
             ])
         ],className='col-12 matplotlib bg-light'),
     ], className = 'row cc')
