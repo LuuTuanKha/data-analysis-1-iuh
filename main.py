@@ -31,9 +31,23 @@ bar_char_01 = go.Figure(data=[
     go.Bar(name='Twelve Months', x=df_s, y=df_12T),
     go.Bar(name='Eighteen Months', x=df_s, y=df_18T)
 ])
-# Change the bar mode
+##
 bar_char_01.update_layout(barmode='group',title ="Biểu đồ biểu diễn số giường bệnh cần có  trong vòng 6, 12 và 18 tháng tới tại các bang.")
+##bar_char_02
+df=pd.DataFrame(data, columns=['State','ICU Beds Needed, Six Months','ICU Beds Needed, Twelve Months','ICU Beds Needed, Eighteen Months'])
+df_sicu=np.array(df['State'])
+df_6TICU=np.array(df['ICU Beds Needed, Six Months'])
+df_12TICU=np.array(df['ICU Beds Needed, Twelve Months'])
+df_18TICU=np.array(df['ICU Beds Needed, Eighteen Months'])
+bar_char_02 = go.Figure(data=[
+    go.Bar(name='6 tháng', x=df_sicu, y=df_6TICU),
+    go.Bar(name='12 tháng', x=df_sicu, y=df_12TICU),
+    go.Bar(name='18 tháng', x=df_sicu, y=df_18TICU)
+])
 
+# Change the bar mode
+bar_char_02.update_layout(barmode='stack',title='Số giường chuẩn ICU cần thiết trong vòng 6,12,18 tháng',xaxis_title='Bang',
+                   yaxis_title='Giường')
 
 ## end bar char 01
 
@@ -292,7 +306,7 @@ barChart = html.Div([
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure= bar_char_01), className='col-12'
+                    dcc.Graph(figure= bar_char_02), className='col-12'
                 )
             ], className='row'),
             
