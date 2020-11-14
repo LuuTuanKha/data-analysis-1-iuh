@@ -191,65 +191,12 @@ fig_his_02 = px.density_heatmap(df_his, x="Total Hospital Beds", y="Total ICU Be
 
 
 
+#---------------
 
 
 
 
 
-##-----------------------------------------------------
-# 2D-Histogram Link
-lineChart = html.Div([
-     # home page text
-    html.Div(
-    ),
-    html.Div([
-        html.Div([
-            html.Ul([
-                dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
-                dcc.Link('Bar Chart', href="/bar-chart", className='el'),
-                dcc.Link('Pie Chart', href="/pie-chart", className='el'),
-                dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
-                  dcc.Link('Dot Chart', href="/dot-chart", className='el'),
-                dcc.Link('Line Chart', href="/line2-chart", className='el'),
-            ],className='listInside')
-        ],
-        className='col-3 listContainer bg-light'),
-        html.Div([
-            html.Div([
-                html.Div('Line Chart', className='title'),
-                dcc.Link('Home Page', href="/"),
-            ], className='fl'),
-            html.Div([
-                 html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('là một loại biểu đồ mà hiển thị thông tin như là một loạt các điểm dữ liệu được gọi là dấu hiệu nối với nhau bằng thẳng dòng phân đoạn. Đây là một loại biểu đồ cơ bản phổ biến trong nhiều lĩnh vực. Nó tương tự như biểu đồ phân tán ngoại trừ việc các điểm đo được sắp xếp thứ tự (thường theo giá trị trục x của chúng) và được nối với các đoạn đường thẳng.',className='content')
-            ]),
-            html.Div([
-                 html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Line Chart thường được sử dụng để hình dung xu hướng dữ liệu trong các khoảng thời gian - một chuỗi thời gian - do đó, đường thường được vẽ theo thứ tự thời gian. Trong những trường hợp này, chúng được gọi là biểu đồ chạy.',className='content')
-            ]),
-            html.Div([
-                 html.Span('Type of charts:', className='introMatplotlib')
-            ]),
-            html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
-                html.Div(
-                    dcc.Graph(figure= fig_his_01), className='col-12'
-                )
-            ], className='row'),
-
-             html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
-                html.Div(
-                    dcc.Graph(figure= fig_his_02), className='col-12'
-                )
-            ], className='row'),
-            
-    
-        ],className='col-8 matplotlib bg-light'),
-    ], className = 'row cc')
-], className='container cc')
-#####------------------------------------------------------------------------------
 
 # # Bar Chart Link
 
@@ -588,6 +535,64 @@ line2Chart = html.Div([
             className='col-3 listContainer bg-light'),
         html.Div([
             html.Div([
+                html.Div('Line Chart', className='title'),
+                dcc.Link('Home Page', href="/"),
+            ], className='fl'),
+            html.Div([
+                html.Span('Mô tả:', className='introMatplotlib'),
+                html.Span(
+                    'là một loại biểu đồ mà hiển thị thông tin như là một loạt các điểm dữ liệu được gọi là dấu hiệu nối với nhau bằng thẳng dòng phân đoạn. Đây là một loại biểu đồ cơ bản phổ biến trong nhiều lĩnh vực. Nó tương tự như biểu đồ phân tán ngoại trừ việc các điểm đo được sắp xếp thứ tự (thường theo giá trị trục x của chúng) và được nối với các đoạn đường thẳng.',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
+                html.Span(
+                    'Line Chart thường được sử dụng để hình dung xu hướng dữ liệu trong các khoảng thời gian - một chuỗi thời gian - do đó, đường thường được vẽ theo thứ tự thời gian. Trong những trường hợp này, chúng được gọi là biểu đồ chạy.',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Type of charts:', className='introMatplotlib')
+            ]),
+            html.Div([
+                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig_his_01), className='col-12'
+                )
+            ], className='row'),
+
+            html.Div([
+                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig_his_02), className='col-12'
+                )
+            ], className='row'),
+
+        ], className='col-8 matplotlib bg-light'),
+    ], className='row cc')
+], className='container cc')
+
+# ##---------------------------------------------------
+##-----------------------------------------------------
+# 2D-Histogram Link
+lineChart = html.Div([
+    # home page text
+    html.Div(
+    ),
+    html.Div([
+        html.Div([
+            html.Ul([
+                dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
+                dcc.Link('Bar Chart', href="/bar-chart", className='el'),
+                dcc.Link('Pie Chart', href="/pie-chart", className='el'),
+                dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
+                dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Line Chart', href="/line2-chart", className='el'),
+            ], className='listInside')
+        ],
+            className='col-3 listContainer bg-light'),
+        html.Div([
+            html.Div([
                 html.Div('2D-Histogram', className='title'),
                 dcc.Link('Home Page', href="/"),
             ], className='fl'),
@@ -623,8 +628,8 @@ line2Chart = html.Div([
         ], className='col-8 matplotlib bg-light'),
     ], className='row cc')
 ], className='container cc')
+#####------------------------------------------------------------------------------
 
-# ##-----------------------------------------------------
 ##-----------------------------------------------------
 ##dot chart
 df= pd.DataFrame(data, columns=['State','Hospital Bed Occupancy Rate','ICU Bed Occupancy Rate'])
