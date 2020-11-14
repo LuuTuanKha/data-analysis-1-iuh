@@ -217,16 +217,16 @@ lineChart = html.Div([
         className='col-3 listContainer bg-light'),
         html.Div([
             html.Div([
-                html.Div('2D-Histogram', className='title'),
+                html.Div('Line Chart', className='title'),
                 dcc.Link('Home Page', href="/"),
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Biểu đồ 2D rất giống với biểu đồ 1D. Các khoảng lớp của tập dữ liệu được vẽ trên cả trục x và y. Không giống như biểu đồ 1D, biểu đồ này được vẽ bằng cách bao gồm tổng số kết hợp của các giá trị xảy ra trong khoảng thời gian x và y, đồng thời đánh dấu các mật độ đó.',className='content')
+                html.Span('là một loại biểu đồ mà hiển thị thông tin như là một loạt các điểm dữ liệu được gọi là dấu hiệu nối với nhau bằng thẳng dòng phân đoạn. Đây là một loại biểu đồ cơ bản phổ biến trong nhiều lĩnh vực. Nó tương tự như biểu đồ phân tán ngoại trừ việc các điểm đo được sắp xếp thứ tự (thường theo giá trị trục x của chúng) và được nối với các đoạn đường thẳng.',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Histogram được sử dụng để phân tích mối quan hệ giữa hai biến dữ liệu có nhiều giá trị.',className='content')
+                html.Span('Line Chart thường được sử dụng để hình dung xu hướng dữ liệu trong các khoảng thời gian - một chuỗi thời gian - do đó, đường thường được vẽ theo thứ tự thời gian. Trong những trường hợp này, chúng được gọi là biểu đồ chạy.',className='content')
             ]),
             html.Div([
                  html.Span('Type of charts:', className='introMatplotlib')
@@ -723,8 +723,8 @@ DataAnalysis = html.Div([
                 dcc.Link('Home Page', href="/"),
             ], className='fl'),
             html.Div([
-                 html.Span('- Dữ liệu thu thập được:', className='introMatplotlib'),
-                 html.Div('dữ liệu thứ cấp',className='content')
+                 html.Span('- Sơ lược về dữ liệu:', className='introMatplotlib'),
+                 html.Div('Dữ liệu thứ cấp, nguồn dữ liệu được lấy từ Data world.',className='content')
             ]),
              html.Div([
                  html.Span('- Định nghĩa các biến số:', className='introMatplotlib'),
