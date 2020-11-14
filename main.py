@@ -142,6 +142,9 @@ simpleChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                 dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
+
+                
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
@@ -194,6 +197,7 @@ lineChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                   dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
@@ -252,6 +256,7 @@ barChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                 dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
@@ -335,6 +340,7 @@ pieChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                   dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
@@ -462,6 +468,7 @@ scatterChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                   dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
@@ -499,7 +506,7 @@ html.Div([
                 html.Div(
                     dcc.Graph(figure=fig), className='col-12'
                 ),
-html.Span('Sử dụng chức năng Zoom trên thanh công cụ để xem chi tiết hơn. ',className='content')
+html.Span('---- Sử dụng chức năng Zoom trên thanh công cụ để xem chi tiết hơn ---- ',className='content')
             ], className='row'),
             
     
@@ -531,6 +538,7 @@ dotChart = html.Div([
                 dcc.Link('Pie Chart', href="/pie-chart", className='el'),
                 dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
                 dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Dot Chart', href="/line2-chart", className='el'),
             ],className='listInside')
         ],
         className='col-3 listContainer bg-light'),
