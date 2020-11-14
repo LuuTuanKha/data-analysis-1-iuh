@@ -313,7 +313,17 @@ fig_pie_01 = px.pie(df_state, values=df_beds, names=df_state, title="Tỉ lệ g
 fig_pie_01.update_traces(textposition='inside')
 fig_pie_01.update_layout(uniformtext_minsize=12, uniformtext_mode='hide')
 
+#========== pie 02
+df_bed=pd.DataFrame(data, columns=['Potentially Available Hospital Beds*','Proejcted Hospitalized Individuals'])
+data_PAH=sum(df_bed['Potentially Available Hospital Beds*'])
+data_PHI=sum(df_bed['Proejcted Hospitalized Individuals'])
+data_AI= data_PHI - data_PAH
+labels = ['tỉ lệ giường bệnh dự kiến có thể có để sử dụng','tỉ lệ giường bệnh thiếu']
+values = [data_PAH,data_AI]
 
+pie_char_02 = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='percent',
+                             insidetextorientation='radial',pull=[0.05, 0],hole=.3
+                            )])
 
 
 
@@ -370,7 +380,7 @@ pieChart = html.Div([
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure= pie_char_02), className='col-12'
                 )
             ], className='row'),
             
@@ -594,7 +604,34 @@ line2Chart = html.Div([
 # ##-----------------------------------------------------
 ##-----------------------------------------------------
 ##dot chart
+df= pd.DataFrame(data, columns=['State','Hospital Bed Occupancy Rate','ICU Bed Occupancy Rate'])
+df_State=[]
+df1=np.array(df['State'])
+for i in df1:
+    df_State.append(i)
+df_H=[]
+df2= np.array(df['Hospital Bed Occupancy Rate']*100,int)
+for i in df2:
+    df_H.append(i)
+df_ICU=[]
+df3= np.array(df['ICU Bed Occupancy Rate']*100,int)
+for i in df3:
+    df_ICU.append(i)
+l = len(df_ICU)
+df = pd.DataFrame(dict(Bang=df_State*2, beds=df_H + df_ICU,
+                       bed_kind=["Hospital Bed Occupancy Rate"]*l + ["ICU Bed Occupancy Rate"]*l))
 
+# Use column names of df for the different parameters x, y, color, ...
+dot_char_01 = px.scatter(df, x="beds", y="Bang", color="bed_kind",
+                 title="Biểu đồ biểu diễn tỉ lệ phủ đầy giường",
+                 labels={"beds":"Tỉ lệ phủ đầy(phần trăm)"} # customize axis label
+                )
+
+dot_char_01.show()
+# biểu đồ cho ta thấy tỉ lệ lấp đầy giường chiếm tỉ lệ rất cao từ 50% -80%, như vậy số giường hiện có
+#sử dụng để chữa bệnh đang dần hết và nếu bệnh dịch diễn biến phức tạp hơn thì khả năng đáp ứng giường bệnh
+# là không có, do đó cần phải tăng cường thêm các giường bệnh giã chiến để phục vụ việc khám và chữa
+# hầu hết tại các bang đều cảnh báo về số bệnh nhân mắc mới và giường bệnh.
 
 
 
@@ -638,7 +675,7 @@ dotChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure=dot_char_01), className='col-12'
                 )
             ], className='row'),
 
