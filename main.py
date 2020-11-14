@@ -524,16 +524,11 @@ scatterChart = html.Div([
                     dcc.Graph(figure=scatt_char_02), className='col-12'
                 )
             ], className='row'),
-html.Div([
-                html.Div('Type 3:', className='col-3  line-chart'),
-                html.Div(
-                    dcc.Graph(figure=fig), className='col-12'
-                ),
 html.Span('---- Sử dụng chức năng Zoom trên thanh công cụ để xem chi tiết hơn ---- ',className='content')
             ], className='row'),
             
     
-        ],className='col-8 matplotlib bg-light'),
+
     ], className = 'row cc')
 ], className='container cc')
 ##=====================================================================
@@ -696,7 +691,7 @@ dotChart = html.Div([
              html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(), className='col-12'
+                    dcc.Graph(figure=fig), className='col-12'
                 )
             ], className='row'),  
         ],className='col-8 matplotlib bg-light'),
