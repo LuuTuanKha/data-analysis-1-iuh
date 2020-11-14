@@ -502,11 +502,11 @@ scatterChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Biểu đồ phân tán trong tiếng Anh là Scatter diagram. Biểu đồ phân tán thực chất là một đồ thị biểu hiện mối tương quan giữa nguyên nhân và kết quả hoặc giữa các yếu tố ảnh hưởng đến chất lượng.',className='content')
+                html.Span('Scatter Char là một loại biểu đồ hoặc sơ đồ toán học sử dụng tọa độ Descartes với các giá trị hiển thị cho thường là hai biến cho một tập hợp các dữ liệu. Nếu các điểm được mã hóa (màu sắc / hình dạng / kích thước), một biến bổ sung có thể được hiển thị. Dữ liệu được hiển thị dưới dạng tập hợp các điểm, mỗi điểm có giá trị của một biến xác định vị trí trên trục hoành và giá trị của biến khác xác định vị trí trên trục tung.',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Scatter chart (biểu đồ phân tán) thường được sử dụng để thể hiện mối tương quan giữa các yếu tố trên đồ thị. ',className='content')
+                html.Span('Scatter chart được sử dụng khi một biến liên tục nằm dưới sự kiểm soát của người thử nghiệm và biến khác phụ thuộc vào nó hoặc khi cả hai biến liên tục là độc lập.',className='content')
             ]),
             html.Div([
                  html.Span('Type of charts:', className='introMatplotlib'),
@@ -686,7 +686,7 @@ dotChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Dot chart (biểu đồ chấm) là một dạng biểu đồ phân tán (Scatter chart) thể hiện sự khác biệt giữa hai hoặc nhiều Type dữ liệu trong cùng một thời điểm hoặc giữa hai hay nhiều điều kiện (condition). Hãy so sánh với Biểu đồ cột (Bar chart), biểu đồ chấm (dot chart) dễ nhìn hơn và cho phép người phân tích dễ dàng so sánh các Type dữ liệu.  ',className='content')
+                html.Span('Dot chart (biểu đồ chấm) là một dạng biểu đồ phân tán (Scatter chart) thể hiện sự khác biệt giữa hai hoặc nhiều Type dữ liệu trong cùng một thời điểm hoặc giữa hai hay nhiều điều kiện (condition). ',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
