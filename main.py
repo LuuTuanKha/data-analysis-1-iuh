@@ -556,14 +556,14 @@ line2Chart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure=fig_his_01), className='col-12'
+                    dcc.Graph(figure=line_char_01), className='col-12'
                 )
             ], className='row'),
 
             html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure=fig_his_02), className='col-12'
+                    dcc.Graph(figure=line02), className='col-12'
                 )
             ], className='row'),
 
@@ -614,14 +614,14 @@ lineChart = html.Div([
             html.Div([
                 html.Div('Type 1:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure=line_char_01), className='col-12'
+                    dcc.Graph(figure=fig_his_01), className='col-12'
                 )
             ], className='row'),
 
             html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure=line02), className='col-12'
+                    dcc.Graph(figure=fig_his_02), className='col-12'
                 )
             ], className='row'),
 
