@@ -281,7 +281,7 @@ barChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Dạng biểu đồ này được thể hiện động thái phát triển, so sánh tương quan về độ lớn giữa các đại lượng hoặc thể hiện một thành phần cơ cấu trong một tổng thể.',className='content')
+                html.Span('Biểu đồ bar chart là biểu đồ hình cột dùng để mô phỏng xu hướng thay đổi của các đối tượng theo thời gian hoặc để so sánh các số liệu/yếu tố của các đối tượng. Biểu đồ bar chart thường có hai trục: một trục là đối tượng/yếu tố cần được phân tích, trục còn lại là thông số của các đối tượng. .',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
@@ -554,6 +554,20 @@ line_char_01.update_layout(title='Sơ đồ tần số tích luỹ của số gi
                    yaxis_title='Giường')
 
 ##line2char
+df=pd.DataFrame(data, columns=['State','Adult Population','Population 65+'])
+Bang=np.array(df['State'])
+THB=np.array(df['Adult Population'])
+PII=np.array(df['Population 65+'])
+line02 = go.Figure()
+line02.add_trace(go.Scatter(x=Bang, y=THB, name='Người trưởng thành',
+                         line=dict(color='firebrick', width=4)))
+line02.add_trace(go.Scatter(x=Bang, y=PII, name='người già',
+                         line=dict(color='Blue', width=4)))
+line02.update_layout(title='Biểu đồ ',
+                   xaxis_title='State',
+                   yaxis_title='Người')
+
+#_________________________
 
 line2Chart = html.Div([
     # home page text
@@ -602,7 +616,7 @@ line2Chart = html.Div([
             html.Div([
                 html.Div('Type 2:', className='col-3  line-chart'),
                 html.Div(
-                    dcc.Graph(figure=fig_his_02), className='col-12'
+                    dcc.Graph(figure=line02), className='col-12'
                 )
             ], className='row'),
 
