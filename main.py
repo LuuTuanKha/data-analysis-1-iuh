@@ -235,6 +235,63 @@ lineChart = html.Div([
         ],className='col-8 matplotlib bg-light'),
     ], className = 'row cc')
 ], className='container cc')
+#####------------------------------------------------------------------------------
+##line2char
+
+line2Chart = html.Div([
+    # home page text
+    html.Div(
+    ),
+    html.Div([
+        html.Div([
+            html.Ul([
+                dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
+                dcc.Link('Bar Chart', href="/bar-chart", className='el'),
+                dcc.Link('Pie Chart', href="/pie-chart", className='el'),
+                dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
+                dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Line Chart', href="/line2-chart", className='el'),
+            ], className='listInside')
+        ],
+            className='col-3 listContainer bg-light'),
+        html.Div([
+            html.Div([
+                html.Div('2D-Histogram', className='title'),
+                dcc.Link('Home Page', href="/"),
+            ], className='fl'),
+            html.Div([
+                html.Span('Mô tả:', className='introMatplotlib'),
+                html.Span(
+                    'Đây là dạng biểu đồ để thể hiện tiến trình phát triển, động thái phát triển của một đối tượng hay một nhóm đối tượng nào đó qua thời gian. Vì vậy với các bài vẽ biểu đồ đường thường có các cụm từ thể hiện sự phát triển, tốc độ tăng trưởng… với các mốc thời gian nhất định. ',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
+                html.Span(
+                    '2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Type of charts:', className='introMatplotlib')
+            ]),
+            html.Div([
+                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig_his_01), className='col-12'
+                )
+            ], className='row'),
+
+            html.Div([
+                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig_his_02), className='col-12'
+                )
+            ], className='row'),
+
+        ], className='col-8 matplotlib bg-light'),
+    ], className='row cc')
+], className='container cc')
 
 # ##-----------------------------------------------------
 # # Bar Chart Link
@@ -648,6 +705,8 @@ def display_page(pathname):
         return simpleChart
     elif pathname == '/line-chart':
         return lineChart
+    elif pathname == '/line2-chart':
+        return line2Chart
     elif pathname =='/bar-chart':
         return barChart
     elif pathname =='/pie-chart':
