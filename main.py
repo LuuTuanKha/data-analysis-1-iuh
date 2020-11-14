@@ -208,11 +208,11 @@ lineChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Đây là dạng biểu đồ để thể hiện tiến trình phát triển, động thái phát triển của một đối tượng hay một nhóm đối tượng nào đó qua thời gian. Vì vậy với các bài vẽ biểu đồ đường thường có các cụm từ thể hiện sự phát triển, tốc độ tăng trưởng… với các mốc thời gian nhất định. ',className='content')
+                html.Span('Biểu đồ 2D rất giống với biểu đồ 1D. Các khoảng lớp của tập dữ liệu được vẽ trên cả trục x và y. Không giống như biểu đồ 1D, biểu đồ này được vẽ bằng cách bao gồm tổng số kết hợp của các giá trị xảy ra trong khoảng thời gian x và y, đồng thời đánh dấu các mật độ đó.',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',className='content')
+                html.Span('Histogram được sử dụng để phân tích mối quan hệ giữa hai biến dữ liệu có nhiều giá trị.',className='content')
             ]),
             html.Div([
                  html.Span('Type of charts:', className='introMatplotlib')
@@ -236,64 +236,7 @@ lineChart = html.Div([
     ], className = 'row cc')
 ], className='container cc')
 #####------------------------------------------------------------------------------
-##line2char
 
-line2Chart = html.Div([
-    # home page text
-    html.Div(
-    ),
-    html.Div([
-        html.Div([
-            html.Ul([
-                dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
-                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
-                dcc.Link('Bar Chart', href="/bar-chart", className='el'),
-                dcc.Link('Pie Chart', href="/pie-chart", className='el'),
-                dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
-                dcc.Link('Dot Chart', href="/dot-chart", className='el'),
-                dcc.Link('Line Chart', href="/line2-chart", className='el'),
-            ], className='listInside')
-        ],
-            className='col-3 listContainer bg-light'),
-        html.Div([
-            html.Div([
-                html.Div('2D-Histogram', className='title'),
-                dcc.Link('Home Page', href="/"),
-            ], className='fl'),
-            html.Div([
-                html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span(
-                    'Đây là dạng biểu đồ để thể hiện tiến trình phát triển, động thái phát triển của một đối tượng hay một nhóm đối tượng nào đó qua thời gian. Vì vậy với các bài vẽ biểu đồ đường thường có các cụm từ thể hiện sự phát triển, tốc độ tăng trưởng… với các mốc thời gian nhất định. ',
-                    className='content')
-            ]),
-            html.Div([
-                html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span(
-                    '2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',
-                    className='content')
-            ]),
-            html.Div([
-                html.Span('Type of charts:', className='introMatplotlib')
-            ]),
-            html.Div([
-                html.Div('Type 1:', className='col-3  line-chart'),
-                html.Div(
-                    dcc.Graph(figure=fig_his_01), className='col-12'
-                )
-            ], className='row'),
-
-            html.Div([
-                html.Div('Type 2:', className='col-3  line-chart'),
-                html.Div(
-                    dcc.Graph(figure=fig_his_02), className='col-12'
-                )
-            ], className='row'),
-
-        ], className='col-8 matplotlib bg-light'),
-    ], className='row cc')
-], className='container cc')
-
-# ##-----------------------------------------------------
 # # Bar Chart Link
 
 
@@ -408,11 +351,11 @@ pieChart = html.Div([
             ], className='fl'),
             html.Div([
                  html.Span('Mô tả:', className='introMatplotlib'),
-                html.Span('Đây là dạng biểu đồ thường được dùng để vẽ các biểu đồ liên quan đến cơ cấu, tỷ lệ các thành phần trong một tổng thể chung hoặc cũng có thể vẽ biểu đồ tròn khi tỷ lệ % trong bảng số liệu cộng lại tròn 100.',className='content')
+                html.Span('Một biểu đồ pie (hoặc một biểu đồ hình tròn ) là một hình tròn đồ họa thống kê , được chia thành lát để minh họa tỷ lệ số. Trong biểu đồ hình tròn, độ dài cung của mỗi lát cắt (và do đó là góc và diện tích trung tâm của nó ), tỷ lệ với số lượng mà nó biểu diễn.',className='content')
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Pie chart (biểu đồ tròn) được sử dụng khi cần biểu diễn dữ liệu dưới dạng % ',className='content')
+                html.Span('Pie chart (biểu đồ tròn) được sử dụng khi cần biểu diễn dữ liệu liên quan về mặt tỷ lệ dưới dạng % ',className='content')
             ]),
             html.Div([
                  html.Span('Type of charts:', className='introMatplotlib'),
@@ -438,7 +381,6 @@ pieChart = html.Div([
 
 ##______________________________________________________
 #scatter charts
-
 p = data['Projected Infected Individuals']
 state  = df_s
 PII = data['Projected Infected Individuals']
@@ -570,8 +512,86 @@ html.Span('---- Sử dụng chức năng Zoom trên thanh công cụ để xem c
         ],className='col-8 matplotlib bg-light'),
     ], className = 'row cc')
 ], className='container cc')
+##=====================================================================
+k=0
+h=0
 
+Bang=df_s
+THB=beds
+PII=ICUbeds
+THB[2]
+for i in range(52):
+    THB[i]=THB[i]+k
+    k=THB[i]
+    PII[i]=PII[i]+h
+    h=PII[i]
+line_char_01 = go.Figure()
+line_char_01.add_trace(go.Scatter(x=Bang, y=THB, name='Giường Phổ Thông',
+                         line=dict(color='firebrick', width=4)))
+line_char_01.add_trace(go.Scatter(x=Bang, y=PII, name='Giường ICU',
+                         line=dict(color='Blue', width=4)))
+line_char_01.update_layout(title='Sơ đồ tần số tích luỹ của số giường bệnh phổ thông và giường đạt chuẩn ICU',
+                   xaxis_title='State',
+                   yaxis_title='Giường')
 
+##line2char
+
+line2Chart = html.Div([
+    # home page text
+    html.Div(
+    ),
+    html.Div([
+        html.Div([
+            html.Ul([
+                dcc.Link('Dash Plotly', href="/simple-chart", className='el'),
+                dcc.Link('2D-Histogram', href="/line-chart", className='el'),
+                dcc.Link('Bar Chart', href="/bar-chart", className='el'),
+                dcc.Link('Pie Chart', href="/pie-chart", className='el'),
+                dcc.Link('Scatter Chart', href="/scatter-chart", className='el'),
+                dcc.Link('Dot Chart', href="/dot-chart", className='el'),
+                dcc.Link('Line Chart', href="/line2-chart", className='el'),
+            ], className='listInside')
+        ],
+            className='col-3 listContainer bg-light'),
+        html.Div([
+            html.Div([
+                html.Div('2D-Histogram', className='title'),
+                dcc.Link('Home Page', href="/"),
+            ], className='fl'),
+            html.Div([
+                html.Span('Mô tả:', className='introMatplotlib'),
+                html.Span(
+                    'Đây là dạng biểu đồ để thể hiện tiến trình phát triển, động thái phát triển của một đối tượng hay một nhóm đối tượng nào đó qua thời gian. Vì vậy với các bài vẽ biểu đồ đường thường có các cụm từ thể hiện sự phát triển, tốc độ tăng trưởng… với các mốc thời gian nhất định. ',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
+                html.Span(
+                    '2D-Histogram (biểu đồ đường): được sử dụng khi dữ liệu được mô tả phụ thuộc vào thời gian với trục hoành biểu diễn thời gian và trục tung biểu diễn đại lượng.',
+                    className='content')
+            ]),
+            html.Div([
+                html.Span('Type of charts:', className='introMatplotlib')
+            ]),
+            html.Div([
+                html.Div('Type 1:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=line_char_01), className='col-12'
+                )
+            ], className='row'),
+
+            html.Div([
+                html.Div('Type 2:', className='col-3  line-chart'),
+                html.Div(
+                    dcc.Graph(figure=fig_his_02), className='col-12'
+                )
+            ], className='row'),
+
+        ], className='col-8 matplotlib bg-light'),
+    ], className='row cc')
+], className='container cc')
+
+# ##-----------------------------------------------------
 ##-----------------------------------------------------
 ##dot chart
 
