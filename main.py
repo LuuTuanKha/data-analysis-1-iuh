@@ -170,6 +170,7 @@ simpleChart = html.Div([
             html.Div([
                  html.Span('Introductionto  Dash - Plotly:', className='introMatplotlib'),
                 html.Span('Dash là Framework Python hiệu quả để xây dựng các ứng dụng phân tích dữ liệu trên web. Được viết bằng Flask, Plotly.js và React.js, Dash rất lý tưởng để xây dựng các ứng dụng trực quan hóa dữ liệu với giao diện người dùng dễ dàng tuỳ chỉnh bằng Python thuần. Nó đặc biệt phù hợp cho bất kỳ ai làm việc với dữ liệu bằng Python. Dash loại bỏ tất cả các công nghệ và giao thức cần thiết để xây dựng một ứng dụng dựa trên web tương tác. Dash đủ đơn giản để bạn có thể liên kết giao diện người dùng của mình bằng  Python trong một thời gian ngắn. Dash triển khai ứng dụng của mình tới các máy chủ và sau đó chia sẻ chúng thông qua các URL.',className='content')
+html.Span('Plotly là một thư viện cực kỳ mạnh mẽ với ngôn ngữ Python dành cho khoa học dữ liệu, máy học và các hoạt động liên quan đến trí tuệ nhân tạo. Plotly có thể sử dụng trực tuyến, ngoại tuyến và trong Jupyter Notebook, cho phép tạo các biểu đồ trực quan cực kỳ mạnh mẽ.',className='content')
             ])
            
         ],className='col-8 matplotlib bg-light'),
@@ -232,7 +233,7 @@ barChart = html.Div([
             ]),
             html.Div([
                  html.Span('Sử dụng khi nào?:', className='introMatplotlib'),
-                html.Span('Bar chart (biểu đồ cột): thường được dùng khi cần phân Type dữ liệu và so sánh độ tương quản giữa chúng ',className='content')
+                html.Span('Bar chart (biểu đồ cột): thường được dùng khi cần phân loại dữ liệu và so sánh độ tương quản giữa chúng ',className='content')
             ]),
             html.Div([
                  html.Span('Type of charts:', className='introMatplotlib')
