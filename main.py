@@ -525,7 +525,7 @@ scatterChart = html.Div([
                 )
             ], className='row'),
 html.Span('---- Sử dụng chức năng Zoom trên thanh công cụ để xem chi tiết hơn ---- ',className='content')
-            ], className='row'),
+            ], className='col-8 matplotlib bg-light'),
             
     
 
